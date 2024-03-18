@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add Event</title>
+    <link
+      rel="stylesheet prefetch"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:600"
+    />
+    <link rel="stylesheet" href="style3.css" />
+  </head>
+  <body>
+    <div class="login-wrap">
+      <div class="login-html">
+        <input id="tab-1" type="radio" name="tab" class="add-event" checked />
+        <label for="tab-1" class="tab">Add Event</label>
+
+        <div class="login-form">
+          <form
+            class="add-event-htm"
+            action="./api/event/add_event.php"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <div class="group">
+              <label for="eventName" class="label">Event Name</label>
+              <input
+                id="eventName"
+                name="eventName"
+                type="text"
+                class="input"
+                required
+              />
+            </div>
+
+            <div class="group">
+              <label for="eventDate" class="label">Event Date</label>
+              <input
+                id="eventDate"
+                name="eventDate"
+                type="date"
+                class="input"
+                required
+              />
+            </div>
+
+            <div class="group">
+              <label for="eventLocation" class="label">Event Location</label>
+              <input
+                id="eventLocation"
+                name="eventLocation"
+                type="text"
+                class="input"
+                required
+              />
+            </div>
+
+            <div class="group">
+              <label for="eventDescription" class="label"
+                >Event Description</label
+              >
+              <textarea
+                id="eventDescription"
+                name="eventDescription"
+                class="input"
+                required
+              ></textarea>
+            </div>
+
+            <div class="group">
+              <label for="eventImage" class="label">Event Image</label>
+              <input
+                id="eventImage"
+                name="eventImage"
+                type="file"
+                class="input"
+                accept="image/*"
+                required
+              />
+            </div>
+
+            <!-- Additional fields can be added based on your requirements -->
+
+            <div class="group">
+              <input type="submit" class="button" value="Add Event" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
